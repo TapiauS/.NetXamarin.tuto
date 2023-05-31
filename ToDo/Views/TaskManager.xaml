@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDo.Views.TaskManager">
+    <StackLayout Margin="10">
+        <Editor x:Name="TaskName"
+                Text="{Binding Text}"
+                HeightRequest="100"/>
+        <Label Text="Done"/>
+        <CheckBox x:Name="validated" IsChecked="{Binding Validate}"/>
+        <Grid ColumnDefinitions="*,*">
+            <Button Text="Save Task" Clicked="SaveButtonClicked" Grid.Column="0"/>
+            <Button Text="Delete Task" Clicked="DeleteTaskClicked" Grid.Column="1"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
